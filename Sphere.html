@@ -1,0 +1,51 @@
+<html>
+    <head>
+    </head>
+    <style>
+        body {
+            padding : 100px ;
+            margin : 20px ;
+            font-family : sans-serif ;
+            background-color: goldenrod ;
+            font-size: larger;
+            cursor:default;
+        }
+
+        button {
+           font-size: large;
+            border:none;
+            border-radius: 15px;
+            width: 120px;
+            height:50px;
+            color : rgb(227, 209, 49) ;
+            text-align: center ;
+            background-color: brown;
+            cursor: pointer;
+    
+        }
+
+        input{
+            font-size: larger;
+        }
+        </style>
+    <body><center>
+        <h1>What's the raius of the sphere</h1>
+        <p>which do you want to measure surface area</p>
+        <p>Do not Enter Symbols or letters</p>
+        <input id = "radius" placeholder = radius>
+        <br><br>
+        <button onclick ="myfun()" >Calculate</button>
+        <p id = "massege"> </p>
+    </center>
+        <script>
+            function myfun() {
+                let radius = document.querySelector("#radius");
+                const pi = 22/7 ;
+                let area = pi * radius.value * radius.value * 4 ; 
+                var massege = document.querySelector("#massege");
+                massege.innerHTML = "Surface area of the radius " + radius.value  + "cm " + " Spere is equalls to " + area + "cm" + "<sup>2</sup>";
+            }
+        </script>
+        
+    </body>
+</html>

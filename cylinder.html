@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            body {
+                padding : 100px ;
+                margin : 20px ;
+                font-family : sans-serif ;
+                background-color: goldenrod ;
+                font-size: larger;
+                cursor:default;
+            }
+    
+            button {
+               font-size: large;
+                border:none;
+                border-radius: 15px;
+                width: 120px;
+                height:50px;
+                color : rgb(227, 209, 49) ;
+                text-align: center ;
+                background-color: brown;
+                cursor: pointer;
+        
+            }
+    
+            input{
+                font-size: larger;
+            }
+
+            p {
+                font-size: smaller;
+                padding-bottom: 5px;
+            }
+            </style>
+    </head>
+    <body><center>
+        <h3>Enter the height of the Cylinder</h3>
+        <p>Do not Enter Symbols or letters</p>
+        <input id = "h">
+        <h3>Enter the base radius of the Cylinder</h3>
+        <p>Do not Enter Symbols or letters</p>
+        <input id = "r"><br><br>
+        <button onclick = "myfun()">Calculate</button>
+        
+        <h3 id = "area"> </h3>
+       
+            
+            
+            <script>
+                function myfun() {
+                let r = document.querySelector("#r");
+                let h = document.querySelector("#h");
+                let area = document.querySelector("#area");
+                const pi = 22/7;
+                let A = (2*pi*r.value*r.value)+(2*pi*r.value*h.value);
+                area.innerHTML = "Surface area of " + r.value + "cm " + "Base radius and " + h.value + "cm" + " height is equalls to " + A + "cm"
+               
+            }
+         </script>        
+    
+
+     </center>   
+    </body>
+
+</html>

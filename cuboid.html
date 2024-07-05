@@ -1,0 +1,64 @@
+<html>
+    <head> <style>
+        body {
+            padding : 100px ;
+            margin : 20px ;
+            font-family : sans-serif ;
+            background-color: goldenrod ;
+            font-size: larger;
+            cursor:default;
+        }
+
+        button {
+           font-size: large;
+            border:none;
+            border-radius: 15px;
+            width: 120px;
+            height:50px;
+            color : rgb(227, 209, 49) ;
+            text-align: center ;
+            background-color: brown;
+            cursor: pointer;
+    
+        }
+
+        input{
+            font-size: larger;
+        }
+
+        p {
+            font-size: smaller;
+            padding-bottom: 5px;
+        }
+        </style></head>
+    <body><center>
+        
+        <h3>Enter the breadth of the Cuboid</h3>
+        <p>Do not enter Symbols or letters</p>
+        <input id = "b">
+        <h3>Enter the height of the Cuboid</h3>
+        <p>Do not enter Symbolsor letters</p>
+        <input id = "h">
+        <h3>Enter the length of the cuboid</h3>
+        <p>Do not enter Symbols or letters</p>
+        <input id = "l"><br><br>
+        <button onclick = "myfun()">Calculate</button>
+        <h3 id = "A"></h3>
+
+        <script>
+
+            function myfun() {
+                let b = document.querySelector("#b");
+                let h = document.querySelector("#h");
+                let l = document.querySelector("#l");
+                let area = document.querySelector("#A");
+                let A = (l.value*b.value)+(l.value*h.value)+(b.value*h.value);
+            area.innerHTML =  "The Surface area of " + b.value + "cm "+ "breadth , " + h.value + "cm " + "height and " + l.value + "cm length cuboid is equalls to " +  A + "cm" + "<sup>2</sup>";
+            
+
+
+            }
+           
+        </script>
+
+    </body>

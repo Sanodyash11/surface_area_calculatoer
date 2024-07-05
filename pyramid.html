@@ -1,0 +1,64 @@
+<html>
+    <head><style>
+        body {
+            padding : 100px ;
+            margin : 20px ;
+            font-family : sans-serif ;
+            background-color: goldenrod ;
+            font-size: larger;
+            cursor:default;
+        }
+
+        button {
+           font-size: large;
+            border:none;
+            border-radius: 15px;
+            width: 120px;
+            height:50px;
+            color : rgb(227, 209, 49) ;
+            text-align: center ;
+            background-color: brown;
+            cursor: pointer;
+    
+        }
+
+        input{
+            font-size: larger;
+        }
+
+        p {
+            font-size: smaller;
+            padding-bottom: 5px;
+        }
+        </style></head>
+    <body><center>
+        <h2>Enter the perpendicular Height of Triangular face</h2>
+        <p>Do not Enter Symbols or letters</p>
+          <input id = "h" placeholder = "Enter height">
+
+           <h2>Enter the Side length of base square</h2>
+             <p>Do not Enter Symbols or letters</p>
+              <input id = "a" placeholder="Enter side length"><br><br>
+
+               <button onclick = "myfun()" >Calculate</button>
+
+                   <h3 id = "area"></h3>
+                  
+                   
+                   
+
+               <script>
+                  function myfun() {
+                    let l = document.querySelector("#h");
+                    let a = document.querySelector("#a");
+                    let area = document.querySelector("#area");
+                    
+                    let A = (a.value * a.value) + (2 * a.value * l.value );
+                    area.innerHTML= "Surface area of " + " " + a.value + "cm Side length of the base and "+ "<br>" + l.value + "cm" + " perpendicular Height of the triangular face is equalls to " + A + "cm" + "<sup>2</sup>";
+
+
+                  }
+                </script>
+          
+        </center>
+    </body>

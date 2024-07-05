@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            body {
+                padding : 100px ;
+                margin : 20px ;
+                font-family : sans-serif ;
+                background-color: goldenrod ;
+                font-size: larger;
+                cursor:default;
+            }
+    
+            button {
+               font-size: large;
+                border:none;
+                border-radius: 15px;
+                width: 120px;
+                height:50px;
+                color : rgb(227, 209, 49) ;
+                text-align: center ;
+                background-color: brown;
+                cursor: pointer;
+        
+            }
+    
+            input{
+                font-size: larger;
+            }
+
+            p {
+                font-size: smaller;
+                padding-bottom: 5px;
+            }
+            </style>
+    </head>
+
+        <body><center>
+            <h1>Enter the side length of the Cube..</h1>
+            <p>Do not enter Symbols or letters </p>
+            <input id = "sideLength" placeholder = "Side length"><br><br>
+            <button onclick = "myfun();" >Calculate</button><br>
+            
+            <h3 id = "area"> </h3>
+             
+            <script>
+               function myfun() {
+                let sideLength = document.querySelector("#sideLength");
+                let area = document.querySelector("#area");
+                let A = sideLength.value * sideLength.value * 6 ;
+                area.innerHTML = "The Surface area of " + sideLength.value + "cm " +" side length "+ "cube is equalls to " + A + "cm" + "<sup>2</sup>" ; 
+               
+            }
+              
+            </script>
+            </center>
+        </body>
+</html>

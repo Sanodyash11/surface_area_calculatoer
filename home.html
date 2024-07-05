@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <style>
+            input {
+                cursor: pointer;
+                size: 30px;
+                padding-left: 120px;
+                color: coral;
+            }
+            .a {
+                font-size: xx-large;
+                padding-left: 120px;
+            }
+            label{
+                font-size:xx-large;
+                padding-left: 120px;
+            }
+
+            #cube {
+                padding-left: 200 px;
+            }
+
+            body {
+                background-color: goldenrod;
+                font-size : 20px;
+            }
+
+            button {
+                background-color:rgb(185, 53, 53) ;
+                text-decoration-color: goldenrod;
+                width : 190px ;
+                height : 50px;
+                border: none ;
+                color : goldenrod;
+                font-size: 20px;
+                cursor: pointer;
+                border-radius: 15px;
+
+            }
+        </style>
+    </head>
+    <body><center><form>
+        <h1>Select the Solid Which do you <br>want to measure Surface Area</h1>
+    </center>
+        <left><input type = "radio" id = "cube" name = "vote" class = "a">
+        <label for = "cube" >Cube</label>
+        <br> <br>
+
+        <input type = "radio" id = "cuboid" name = "vote" class = "a"> 
+        <label for = "cuboid" >Cuboid</label>
+        <br> <br>
+
+        <input type = "radio" id = "pyramid" name = "vote" class = "a">
+        <label for = "pyramid" >Pyramid</label>
+        <br> <br>
+
+        <input type = "radio" id = "cone" name = "vote" class = "a">
+        <label for = "cone" > Cone</label>
+        <br> <br>
+
+        <input type = "radio" id = "cylinder" name = "vote" class = "a">
+        <label for = "cylinder" > Cylinder</label>
+        <br> <br>
+
+        <input type = "radio" id = "sphere" name = "vote" class = "a">
+        <label for = "sphere" > Sphere </label>
+        <br> <br>
+        </left>
+    </form>
+   <center>
+        <button onclick = "click()">Select</button>
+        
+    <script>
+    
+    function click() {
+        let a = document.querySelectorAll(".a").value;
+        let b = document.getElementsByTagName("input");
+    
+        for(let i = 0;  i <= b.length;  i++){
+        window.location href = i + ".html";
+        }
+    } 
+                
+                
+        </script>
+    </center>
+    </body>

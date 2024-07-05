@@ -1,0 +1,60 @@
+<html>
+    <head><style>
+        body {
+            padding : 100px ;
+            margin : 20px ;
+            font-family : sans-serif ;
+            background-color: goldenrod ;
+            font-size: larger;
+            cursor:default;
+        }
+
+        button {
+           font-size: large;
+            border:none;
+            border-radius: 15px;
+            width: 120px;
+            height:50px;
+            color : rgb(227, 209, 49) ;
+            text-align: center ;
+            background-color: brown;
+            cursor: pointer;
+    
+        }
+
+        input{
+            font-size: larger;
+        }
+
+        p {
+            font-size: smaller;
+            padding-bottom: 5px;
+        }
+        </style>
+    </head>
+    <body><center>
+        <h2>Enter the radius of the base radius of the cone</h2>
+        <p>Do not enter symbols or letters</p>
+        <input id = "r" placeholder="Enter radius">
+        <h2>Enter the Slant height of the cone</h2>
+        <p>Do not enter Symbols or letters</p>
+        <input id = "l" placeholder="Enter the Slant height">
+        <br><br>
+        <button onclick = "myfun()">Calculate</button>
+        <h3 id = "answer"></h3>
+
+        <script>
+
+        function myfun() {
+            let r = document.querySelector("#r");
+            let l = document.querySelector("#l");
+            let answer = document.querySelector("#answer");
+            const pi = 22/7 ;
+            let A = ( pi * r.value * r.value ) + ( pi * r.value * l.value);
+            answer.innerHTML= "Surface area of" +" "+ r.value + "cm Base radius and " + l.value + "cm slant height " +"<br>"+"Right Circular Cone is equalls to " + A + "cm" + "<sup>2</sup>" ;
+
+
+        }
+        </script>
+    </center></body>
+</html>
